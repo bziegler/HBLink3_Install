@@ -29,6 +29,9 @@ sleep 2
 apt update && apt install -y $DEP
 apt autoremove && apt autoclean
 
+# added by Brad Ziegler
+apt pip python git curl pkg-config python3-dev default-libmysqlclient-dev build-essential 
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
 echo ""
 echo " Installing packages in the virtual environment .... "
